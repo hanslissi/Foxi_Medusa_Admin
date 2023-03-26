@@ -56,7 +56,7 @@ const CollectionModal: React.FC<CollectionModalProps> = ({
         handle: collection.handle,
       })
 
-      if (collection.metadata) {
+      if (collection.metadata && metadata.length <= 0) {
         Object.entries(collection.metadata).map(([key, value]) => {
           if (typeof value === "string") {
             const newMeta = metadata
